@@ -1,0 +1,137 @@
+<!-- for home page -->
+<br />
+<div class="container">
+  <div class="row">
+    <!-- displaying books data in table format  -->
+    <!-- to display total items and sort option -->
+    <div class="container">
+      <table class="table borderless">
+        <tr>
+          <td style="width: 2%">
+            <h3 style="font-size: 30px">Books</h3>
+          </td>
+          <td style="width: 100%">
+            <small>({{ allBooks.length }} item)</small>
+          </td>
+          <td>
+            <select name="" id="" (change)="sortByOption($event)">
+              <option value="Sortbyrelevance">Sort by relevance</option>
+              <option value="lowtohigh">Price : Low to High</option>
+              <option value="hightolow">Price : High to Low</option>
+              <option value="newarrival">Newest Arrival</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="row" *ngIf="hideBooks">
+      <mat-card
+        class="example-card column"
+        style="width: 17rem"
+        *ngFor="let book of allBooks"
+      >
+        <div
+          data-toggle="tooltip"
+          data-placement="top"
+          title="{{ book.bookDetail }}"
+          style="
+            background-color: #f5f5f5;
+            margin-left: -16px;
+            margin-right: -16px;
+            margin-top: -15px;
+            padding: 50px 50px 10px 50px;
+          "
+        >
+        <mat-card-content style="background-color: white;position: absolute;margin-top: 40%;" *ngIf="book.inStock">
+          <h1>&nbsp;OUT OF STOCK&nbsp;</h1>
+        </mat-card-content>
+          <img
+            style="height: 200px; width: 150px"
+            mat-card-image
+            src="{{ book.bookImage }}"
+            alt="Photo of a book"
+          />
+          
+        </div>
+
+        <br />
+        <mat-card-content>
+          <mat-card-title>{{ book.bookName }}</mat-card-title>
+          <mat-card-subtitle>{{ book.bookAuthor }}</mat-card-subtitle>
+          <h3>Rs .{{ book.bookPrice }}</h3>
+        </mat-card-content>
+        <mat-card-actions id="BeforeAdded_{{ book.id }}" *ngIf="book.inStock!=1 && !book.addedToBag">
+          <span>
+            <button (click)="addItem(book.id,book)" mat-raised-button style="background-color: #a03037;color: white;" >
+              ADD TO BAG
+            </button>
+            <button mat-raised-button (click)="addWish(book.id)" >
+              WISHLIST
+            </button>
+          </span>
+        </mat-card-actions>
+        <mat-card-actions id="AfterAdded_{{ book.id }}" *ngIf="book.addedToBag">
+          <span>
+            <button mat-raised-button style="background-color: #3371b5;color: white;width: 100%;">ADDED TO BAG</button>
+          </span>
+        </mat-card-actions>
+        <mat-card-actions id="AfterAdded_{{ book.id }}" *ngIf="book.inStock==1">
+          <span>
+            <button mat-raised-button style="width: 100%;">Wishlist</button>
+          </span>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+
+  <!-- sorted books -->
+  <!-- <div class="row">
+    <mat-card
+      class="example-card column"
+      style="width: 17rem"
+      *ngFor="let book of sort"
+    >
+      <div
+        data-toggle="tooltip"
+        data-placement="top"
+        title="{{ book.bookDetail }}"
+        style="
+          background-color: #f5f5f5;
+          margin-left: -16px;
+          margin-right: -16px;
+          margin-top: -15px;
+          padding: 50px 50px 10px 50px;
+        "
+      >
+        <img
+          style="height: 200px; width: 150px"
+          mat-card-image
+          src="{{ book.bookImage }}"
+          alt="Photo of a book"
+          style="height: 200px"
+        />
+      </div>
+      <br />
+      <mat-card-content>
+        <mat-card-title>{{ book.bookName }}</mat-card-title>
+        <mat-card-subtitle>{{ book.bookAuthor }}</mat-card-subtitle>
+        <h3>Rs .{{ book.bookPrice }}</h3>
+      </mat-card-content>
+      <mat-card-actions id="BeforeAdded_{{ book.id }}">
+        <span>
+          <button (click)="addItem(book.id)" mat-raised-button>
+            ADD TO BAG
+          </button>
+
+          <button mat-raised-button (click)="addWish(book.id)">WISHLIST</button>
+        </span>
+      </mat-card-actions>
+      <mat-card-actions id="AfterAdded_{{ book.id }}" style="display: none">
+        <span>
+          <button mat-raised-button>ADDED TO BAG</button>
+        </span>
+      </mat-card-actions>
+    </mat-card>
+  </div> -->
+</div>

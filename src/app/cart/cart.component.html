@@ -1,0 +1,24 @@
+<div class="container">
+  <br />
+  <span style="font-size: large; padding-left: 50px"> Cart </span>
+  <div *ngFor="let books of cart">
+    <mat-card class="example-card">
+      <mat-card-title-group>
+        <img mat-card-md-image src="{{ books.bookImage }}" />
+        <mat-card-title>{{ books.bookName }}</mat-card-title>
+        <mat-card-subtitle>{{ books.bookAuthor }}</mat-card-subtitle>
+      </mat-card-title-group>
+      <mat-card-content>
+        {{ books.bookDetail }}
+        <br /><br />
+        <button mat-raised-button color="accent" (click)="placeOrder(books.id)">
+          Go for Order
+        </button>
+        &nbsp;
+        <button mat-raised-button color="warn" (click)="removeItem(books.id)">
+          remove
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

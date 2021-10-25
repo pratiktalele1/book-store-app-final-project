@@ -1,0 +1,244 @@
+<mat-toolbar style="background-color: #a03037">
+  <div class="container" style="color: white">
+    <span><img src="../assets/education.svg" alt="" width="40" /></span>&nbsp;
+    <span>Bookstore</span>
+    <span> </span>
+
+    <span style="float: right">
+      <small> cart </small>
+      <span class="material-icons" style="vertical-align: middle">
+        <mat-icon
+          matBadge="{{ cart.length }}"
+          matBadgeColor="white"
+          routerLink="/cart"
+          >shopping_cart</mat-icon
+        >
+      </span>
+    </span>
+  </div>
+</mat-toolbar>
+
+<!-- for home page -->
+<!-- <br>
+<div class="container">
+  <div class="row">
+
+<mat-card class="example-card column" style="width: 18rem;">
+  <div style="background-color: #F5F5F5;margin-left: -16px;margin-right: -16px;margin-top: -15px; padding: 50px 50px 10px 50px ;">
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  </div>
+  <br>
+<mat-card-content>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <mat-card-subtitle>Shiba Inu</mat-card-subtitle>
+</mat-card-content>
+<mat-card-actions>
+  <span>
+    <button mat-raised-button style="background-color: #A03037;color: white;">Warn</button>
+    <button mat-raised-button>Basic</button>
+  </span>
+</mat-card-actions>
+</mat-card>
+
+<mat-card class="example-card column" style="width: 18rem;">
+  <div style="background-color: #F5F5F5;margin-left: -16px;margin-right: -16px;margin-top: -15px; padding: 50px 50px 10px 50px ;">
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  </div>
+  <br>
+<mat-card-content>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <mat-card-subtitle>Shiba Inu</mat-card-subtitle>
+</mat-card-content>
+<mat-card-actions>
+  <span>
+    <button mat-raised-button style="background-color: #A03037;color: white;">Warn</button>
+    <button mat-raised-button>Basic</button>
+  </span>
+</mat-card-actions>
+</mat-card>
+
+<mat-card class="example-card column" style="width: 18rem;">
+  <div style="background-color: #F5F5F5;margin-left: -16px;margin-right: -16px;margin-top: -15px; padding: 50px 50px 10px 50px ;">
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  </div>
+  <br>
+<mat-card-content>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <mat-card-subtitle>Shiba Inu</mat-card-subtitle>
+</mat-card-content>
+<mat-card-actions>
+  <span>
+    <button mat-raised-button style="background-color: #A03037;color: white;">Warn</button>
+    <button mat-raised-button>Basic</button>
+  </span>
+</mat-card-actions>
+</mat-card>
+
+<mat-card class="example-card column" style="width: 18rem;">
+  <div style="background-color: #F5F5F5;margin-left: -16px;margin-right: -16px;margin-top: -15px; padding: 50px 50px 10px 50px ;">
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  </div>
+  <br>
+<mat-card-content>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <mat-card-subtitle>Shiba Inu</mat-card-subtitle>
+</mat-card-content>
+<mat-card-actions>
+  <span>
+    <button mat-raised-button style="background-color: #A03037;color: white;">Warn</button>
+    <button mat-raised-button>Basic</button>
+  </span>
+</mat-card-actions>
+</mat-card>
+
+<mat-card class="example-card column" style="width: 18rem;">
+  <div style="background-color: #F5F5F5;margin-left: -16px;margin-right: -16px;margin-top: -15px; padding: 50px 50px 10px 50px ;">
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  </div>
+  <br>
+<mat-card-content>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <mat-card-subtitle>Shiba Inu</mat-card-subtitle>
+</mat-card-content>
+<mat-card-actions>
+  <span>
+    <button mat-raised-button style="background-color: #A03037;color: white;">Warn</button>
+    <button mat-raised-button>Basic</button>
+  </span>
+</mat-card-actions>
+</mat-card>
+
+<mat-card class="example-card column" style="width: 18rem;">
+  <div style="background-color: #F5F5F5;margin-left: -16px;margin-right: -16px;margin-top: -15px; padding: 50px 50px 10px 50px ;">
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  </div>
+  <br>
+<mat-card-content>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <mat-card-subtitle>Shiba Inu</mat-card-subtitle>
+</mat-card-content>
+<mat-card-actions>
+  <span>
+    <button mat-raised-button style="background-color: #A03037;color: white;">Warn</button>
+    <button mat-raised-button>Basic</button>
+  </span>
+</mat-card-actions>
+</mat-card>
+
+<mat-card class="example-card column" style="width: 18rem;">
+  <div style="background-color: #F5F5F5;margin-left: -16px;margin-right: -16px;margin-top: -15px; padding: 50px 50px 10px 50px ;">
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  </div>
+  <br>
+<mat-card-content>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <mat-card-subtitle>Shiba Inu</mat-card-subtitle>
+</mat-card-content>
+<mat-card-actions>
+  <span>
+    <button mat-raised-button style="background-color: #A03037;color: white;">Warn</button>
+    <button mat-raised-button>Basic</button>
+  </span>
+</mat-card-actions>
+</mat-card>
+
+<mat-card class="example-card column" style="width: 18rem;">
+  <div style="background-color: #F5F5F5;margin-left: -16px;margin-right: -16px;margin-top: -15px; padding: 50px 50px 10px 50px ;">
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  </div>
+  <br>
+<mat-card-content>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <mat-card-subtitle>Shiba Inu</mat-card-subtitle>
+</mat-card-content>
+<mat-card-actions>
+  <span>
+    <button mat-raised-button style="background-color: #A03037;color: white;">Warn</button>
+    <button mat-raised-button>Basic</button>
+  </span>
+</mat-card-actions>
+</mat-card>
+
+<mat-card class="example-card column" style="width: 18rem;">
+  <div style="background-color: #F5F5F5;margin-left: -16px;margin-right: -16px;margin-top: -15px; padding: 50px 50px 10px 50px ;">
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  </div>
+  <br>
+<mat-card-content>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <mat-card-subtitle>Shiba Inu</mat-card-subtitle>
+</mat-card-content>
+<mat-card-actions>
+  <span>
+    <button mat-raised-button style="background-color: #A03037;color: white;">Warn</button>
+    <button mat-raised-button>Basic</button>
+  </span>
+</mat-card-actions>
+</mat-card>
+
+<mat-card class="example-card column" style="width: 18rem;">
+  <div style="background-color: #F5F5F5;margin-left: -16px;margin-right: -16px;margin-top: -15px; padding: 50px 50px 10px 50px ;">
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  </div>
+  <br>
+<mat-card-content>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <mat-card-subtitle>Shiba Inu</mat-card-subtitle>
+</mat-card-content>
+<mat-card-actions>
+  <span>
+    <button mat-raised-button style="background-color: #A03037;color: white;">Warn</button>
+    <button mat-raised-button>Basic</button>
+  </span>
+</mat-card-actions>
+</mat-card>
+
+<mat-card class="example-card column" style="width: 18rem;">
+  <div style="background-color: #F5F5F5;margin-left: -16px;margin-right: -16px;margin-top: -15px; padding: 50px 50px 10px 50px ;">
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  </div>
+  <br>
+<mat-card-content>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <mat-card-subtitle>Shiba Inu</mat-card-subtitle>
+</mat-card-content>
+<mat-card-actions>
+  <span>
+    <button mat-raised-button style="background-color: #A03037;color: white;">Warn</button>
+    <button mat-raised-button>Basic</button>
+  </span>
+</mat-card-actions>
+</mat-card>
+
+<mat-card class="example-card column" style="width: 18rem;">
+  <div style="background-color: #F5F5F5;margin-left: -16px;margin-right: -16px;margin-top: -15px; padding: 50px 50px 10px 50px ;">
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  </div>
+  <br>
+<mat-card-content>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <mat-card-subtitle>Shiba Inu</mat-card-subtitle>
+</mat-card-content>
+<mat-card-actions>
+  <span>
+    <button mat-raised-button style="background-color: #A03037;color: white;">Warn</button>
+    <button mat-raised-button>Basic</button>
+  </span>
+</mat-card-actions>
+</mat-card>
+
+
+</div>
+</div> -->

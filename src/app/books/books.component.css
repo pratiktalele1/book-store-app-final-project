@@ -1,0 +1,52 @@
+mat-card {
+  margin-left: 30px;
+  /* margin-right: 10px; */
+  margin-top: 30px;
+  /* padding-bottom: 40px; */
+}
+
+.mat-raised-button {
+  width: 120px;
+}
+
+mat-card-actions {
+  text-align: center;
+}
+
+.addtobag {
+  width: 90%;
+  background-color: #3371b5;
+  color: white;
+}
+
+.afteradd {
+  width: 90%;
+  background-color: #3371b5;
+  color: white;
+}
+
+.beforeadd {
+  background-color: #a03037;
+  color: white;
+}
+
+.wishlist {
+  width: 90%;
+}
+
+#example {
+  position: absolute;
+  top: 150px;  
+  /* margin-left: 5px; */
+  font-size: 20px;
+  padding-left: 50px;
+  margin-left: 20px;
+  margin-right: 20px;  
+  padding-right: 50px;
+  background-color: white;
+  border: none;
+}
+
+img{
+  margin-left: 15px;
+}

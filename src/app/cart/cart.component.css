@@ -1,0 +1,9 @@
+mat-card {
+  margin-top: 20px;
+}
+
+.example-card {
+  max-width: 1000px;
+  margin-bottom: 8px;
+  margin-left: 50px;
+}

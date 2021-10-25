@@ -1,0 +1,13 @@
+.card {
+  margin-top: 20px;
+  border: none;
+}
+
+th {
+  background-color: #fafafa;
+}
+
+table {
+  width: 80%;
+  margin-left: 10%;
+}
