@@ -61,7 +61,7 @@
           <mat-card-subtitle>{{ book.bookAuthor }}</mat-card-subtitle>
           <h3>Rs .{{ book.bookPrice }}</h3>
         </mat-card-content>
-        <mat-card-actions id="BeforeAdded_{{ book.id }}" *ngIf="book.inStock!=1 && !book.addedToBag">
+        <mat-card-actions id="BeforeAdded_{{ book.id }}" *ngIf="book.bookAddedToBag==0 && book.inStock!=1">
           <span>
             <button (click)="addItem(book.id,book)" mat-raised-button style="background-color: #a03037;color: white;" >
               ADD TO BAG
@@ -71,7 +71,7 @@
             </button>
           </span>
         </mat-card-actions>
-        <mat-card-actions id="AfterAdded_{{ book.id }}" *ngIf="book.addedToBag">
+        <mat-card-actions id="AfterAdded_{{ book.id }}" *ngIf="book.bookAddedToBag==1">
           <span>
             <button mat-raised-button style="background-color: #3371b5;color: white;width: 100%;">ADDED TO BAG</button>
           </span>

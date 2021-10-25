@@ -32,72 +32,35 @@ export class BooksComponent implements OnInit {
   ngOnInit(): void {
     this._service.getAllBooks().subscribe((getData: any) => {
       // this.allBooks = getData.data;
-      let booksArray:Books[]=getData.data;
-      for(let i=0;i<booksArray.length;i++){
-        let book:Books=new Books(booksArray[i]);
+      console.log(getData.data);
+      let booksArray: Books[] = getData.data;
+      for (let i = 0; i < booksArray.length; i++) {
+        let book: Books = new Books(booksArray[i]);
         this.allBooks.push(book);
       }
-      
     });
 
-    // this.GetAllSelectedInCart();
   }
 
-  /**
-   * getting all books of cart by calling getAllCartItem service
-   */
-  // GetAllSelectedInCart() {
-  //   this._service.getAllCartItem().subscribe((getData: any) => {
-  //     this.CartData = getData.data;
-  //     for (let i = 0; i < this.CartData.length; i++) {
-  //       var RowElement = document.getElementById(
-  //         'BeforeAdded_' + this.CartData[i].id
-  //       );
-  //       // if (RowElement) {
-        //   document.getElementById(
-        //     'BeforeAdded_' + this.CartData[i].id
-        //   ).style.display = 'none';
-        //   document.getElementById(
-        //     'AfterAdded_' + this.CartData[i].id
-        //   ).style.display = 'block';
-        // }
-      // }
-  //   });
-  // }
 
   /**
    *
    * @param id id is sending to service to add book in cart list using addItemToBag service
    */
-  addItem(id,obj) {
-    
+  addItem(id, obj) {
     console.log(id);
     this.clickBefore = false;
     this.clickedByUser = true;
     this.wishList = false;
-    // obj.addedToBag=true;
+    obj.bookAddedToBag = 1;
 
-    console.log(obj,this.allBooks);
+    console.log(obj, this.allBooks);
 
     this._service
-            .addItemToBag(obj)
-            .subscribe((data) => console.log('book add to cart'));
-        
+      .addItemToBag(obj)
+      .subscribe((data) => console.log('book add to cart'));
 
-    // this._service.getAllBooks().subscribe((getData: any) => {
-    //   // this.allBooks = getData.data;
-    //   for (let i = 0; i < this.allBooks.length; i++) {
-    //     if (this.allBooks[i].id == id) {
-    //       this._service
-    //         .addItemToBag(this.allBooks[i])
-    //         .subscribe((data) => console.log('book add to cart'));
-    //     }
-    //   }
-    // });
-
-    // document.getElementById('BeforeAdded_' + id).style.display = 'none';
-    // document.getElementById('AfterAdded_' + id).style.display = 'block';
-    // window.location.reload();
+    window.location.reload();
   }
 
   /**
@@ -118,21 +81,18 @@ export class BooksComponent implements OnInit {
     if (option.target.value == 'lowtohigh') {
       this._service.getLowToHigh().subscribe((getData: any) => {
         this.allBooks = getData.data;
-        // this.GetAllSelectedInCart();
       });
     }
 
     if (option.target.value == 'hightolow') {
       this._service.getHighToLow().subscribe((getData: any) => {
         this.allBooks = getData.data;
-        // this.GetAllSelectedInCart();
       });
     }
 
     if (option.target.value == 'Sortbyrelevance') {
       this._service.getAllBooks().subscribe((getData: any) => {
         this.allBooks = getData.data;
-        // this.GetAllSelectedInCart();
       });
     }
   }

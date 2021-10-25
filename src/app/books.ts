@@ -6,7 +6,7 @@ export class Books {
 	bookPrice: number ;
 	inStock:number ;
 	bookImage:string;
-	addedToBag:boolean;
+	bookAddedToBag:number;
 
 	constructor(obj:any){
 		this.id=obj.id;
@@ -16,6 +16,6 @@ export class Books {
 		this.bookPrice=obj.bookPrice;
 		this.inStock=obj.inStock;
 		this.bookImage=obj.bookImage;
-		this.addedToBag=obj.addedToBag;
+		this.bookAddedToBag=obj.bookAddedToBag;
 	}
 }

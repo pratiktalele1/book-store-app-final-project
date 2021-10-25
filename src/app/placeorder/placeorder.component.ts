@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { BooksdataService } from '../booksdata.service';
 
@@ -16,7 +16,8 @@ export class PlaceorderComponent implements OnInit {
    */
   constructor(
     private _service: BooksdataService,
-    private snap: ActivatedRoute
+    private snap: ActivatedRoute,
+    private fb:FormBuilder
   ) {}
 
   /**
@@ -33,15 +34,15 @@ export class PlaceorderComponent implements OnInit {
   /**
    * form variable is declare
    */
-  data = new FormGroup({
-    name: new FormControl(''),
-    phoneNumber: new FormControl(''),
-    cityName: new FormControl(''),
-    landmark: new FormControl(''),
-    address: new FormControl(''),
-    locality: new FormControl(''),
-    pinCode: new FormControl(''),
-    place: new FormControl(''),
+  data = this.fb.group({
+    name: [''],
+    phoneNumber: [''],
+    cityName: [''],
+    landmark: [''],
+    address: [''],
+    locality: [''],
+    pinCode: [''],
+    place: ['']
   });
 
   /**
