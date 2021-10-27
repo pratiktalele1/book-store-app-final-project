@@ -25,7 +25,7 @@
       </table>
     </div>
 
-    <div class="row" *ngIf="hideBooks">
+    <div class="row" >
       <mat-card
         class="example-card column"
         style="width: 17rem"
@@ -63,7 +63,7 @@
         </mat-card-content>
         <mat-card-actions id="BeforeAdded_{{ book.id }}" *ngIf="book.bookAddedToBag==0 && book.inStock!=1">
           <span>
-            <button (click)="addItem(book.id,book)" mat-raised-button style="background-color: #a03037;color: white;" >
+            <button (click)="addItem(book)" mat-raised-button style="background-color: #a03037;color: white;" >
               ADD TO BAG
             </button>
             <button mat-raised-button (click)="addWish(book.id)" >

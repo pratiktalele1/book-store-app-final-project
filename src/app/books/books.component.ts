@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Books } from '../books';
+import { BookDTO } from '../BookDTO';
 import { BooksdataService } from '../booksdata.service';
 
 @Component({
@@ -17,15 +17,9 @@ export class BooksComponent implements OnInit {
   /**
    * variables
    */
-  public clickedByUser: boolean = false;
-  public addToBag: boolean = true;
-  public wishList: boolean = true;
-  public clickBefore: boolean = true;
+ 
   public allBooks = [];
-  public sort = [];
-  public CartData = [];
-  public hideBooks = true;
-
+ 
   /**
    * getAllBooks service is called to get all books
    */
@@ -33,9 +27,9 @@ export class BooksComponent implements OnInit {
     this._service.getAllBooks().subscribe((getData: any) => {
       // this.allBooks = getData.data;
       console.log(getData.data);
-      let booksArray: Books[] = getData.data;
+      let booksArray: BookDTO[] = getData.data;
       for (let i = 0; i < booksArray.length; i++) {
-        let book: Books = new Books(booksArray[i]);
+        let book: BookDTO = new BookDTO(booksArray[i]);
         this.allBooks.push(book);
       }
     });
@@ -47,11 +41,7 @@ export class BooksComponent implements OnInit {
    *
    * @param id id is sending to service to add book in cart list using addItemToBag service
    */
-  addItem(id, obj) {
-    console.log(id);
-    this.clickBefore = false;
-    this.clickedByUser = true;
-    this.wishList = false;
+  addItem(obj) {
     obj.bookAddedToBag = 1;
 
     console.log(obj, this.allBooks);
@@ -68,8 +58,7 @@ export class BooksComponent implements OnInit {
    * @param id id is sending to add book in wishlist
    */
   addWish(id) {
-    this.clickedByUser = true;
-    this.addToBag = false;
+    console.log(id);
   }
 
   /**
